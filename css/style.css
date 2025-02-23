@@ -25,20 +25,6 @@ body {
         border-radius: 20px;
     }
 
-    .nav-item {
-        border-bottom: 1px solid #bfc1c8;
-        padding: 10px;
-
-    }
-
-    .nav-item:hover {
-
-        border-bottom: 1px solid #bfc1c8;
-        border-left: 1px solid transparent;
-        border-right: 1px solid transparent;
-        border-top: 1px solid transparent;
-        color: white;
-    }
 
     .nav-item:last-child {
         border-bottom: none;
@@ -74,8 +60,9 @@ body {
 
 .special {
     padding: 5px 25px;
-    border-radius: 30px;
-    border: 0 solid var(--secondary-color);
+    
+    border-radius: 50px;
+    border: 1px solid transparent;
     color: white;
     transition: 0.5s ease-in-out;
 }
