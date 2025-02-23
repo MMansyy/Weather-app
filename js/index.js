@@ -43,9 +43,11 @@ function display(data) {
     let tomorrowData = data.forecast.forecastday[1].day;
     let TheDayAfterTomorrowData = data.forecast.forecastday[2].day;
     let location = data.location;
-    let cartoona = ` <div class="col-xl-4 my-4 rounded-5">
+    let cartoona = ` 
+    <div class='row mx-auto my-5'>
+    <div class="col-xl-4 px-0   ">
     <div class="card border-0 ">
-        <div class="card-header odd-head">
+        <div class="card-header rounded-0 odd-head ">
             <div class="d-flex justify-content-between align-items-center">
                 <p class="m-0">${today}</p>
                 <p class="m-0">${date} ${currentMonth}</p>
@@ -67,20 +69,20 @@ function display(data) {
 
                 <div class="img-one d-flex align-items-center gap-2">
                     <img width="25px" src="imgs/icon-wind.png" alt="umberella">
-                    <p class="mb-0">20%</p>
+                    <p class="mb-0">28%</p>
                 </div>
 
                 <div class="img-one d-flex align-items-center gap-2">
                     <img width="25px" src="imgs/icon-compass.png" alt="umberella">
-                    <p class="mb-0">20%</p>
+                    <p class="mb-0">21%</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-xl-4 my-4 rounded-5">
+    <div class="col-xl-4 px-0">
         <div class="card border-0 h-100">
-            <div class="card-header even-head text-center">
+            <div class="card-header rounded-0 even-head text-center">
                 <p class="mb-0">${tomorrow}</p>
             </div>
             <div
@@ -94,9 +96,9 @@ function display(data) {
         </div>
     </div>
 </div>
-<div class="col-xl-4 my-4 rounded-5">
+<div class="col-xl-4 px-0">
     <div class="card border-0 h-100">
-        <div class="card-header odd-head text-center">
+        <div class="card-header rounded-0 odd-head text-center">
             <p class="mb-0">${TheDayAfterTomorrow}</p>
         </div>
         <div class="card-body odd-body d-flex flex-column justify-content-center align-content-center ">
@@ -108,6 +110,7 @@ function display(data) {
             <p id="sec-day-desc" class="mt-3 text-center blue-text">${TheDayAfterTomorrowData.condition.text}</p>
         </div>
     </div>
+</div>
 </div>`
 
     document.getElementById("weather-details").innerHTML = cartoona;
